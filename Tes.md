@@ -93,14 +93,12 @@ Nanopore first!
    Also, I ran the whole prompt even though I was pretty sure I didnt need to run the create or install lines but I was running everything parallel on different terminals and I wanted to be sure everything was loaded correctly. 
    
    
+   ```
    
-    ```
-    
    spack load /r67sol
    samtools view -b -@ 2 GenomeNanopore.sam > nanoporesniffiles.bam
    samtools sort -@ 2 nanoporesniffiles.bam -o nanoporesniffles.sorted.bam
    samtools index nanoporesniffles.sorted.bam
-   
    conda activate sniffles
    conda install sniffles=2.0
 
