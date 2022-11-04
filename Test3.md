@@ -225,15 +225,26 @@ Duplication
 
 Scaffold_4      26142922        Sniffles2.DUP.306CS0    N       <DUP>   60      PASS    PRECISE;SVTYPE=DUP;SVLEN=4785;END=26147707;SUPPORT=9;COVERAGE=66,32,42,None,None;STRAND=+-;AF=0.231;STDEV_LEN=0.000;STDEV_POS=0.000     GT:GQ:DR:DV     0/1:6:30:9
 
-This is a 4785 bp duplication starting at 26142922 and ending at 26147707. This is what we see in IGV 
+This is a 4785 bp duplication starting at 26142922 and ending at 26147707. I cant see it excep![image](https://user-images.githubusercontent.com/115577500/199865430-29c9a7ea-d3ba-486e-ab38-541ade2f2fb3.png) well in IGV but the gray band above the text box is the only contig that starts around 26142922 and is 4785 long.
+        
+![image](https://user-images.githubusercontent.com/115577500/199865985-8fab7d2a-8eae-4df6-851f-ce29283b4339.png)
 
 Insertion
         
 Scaffold_4      745766  Sniffles2.INS.E6S0      N       <INS>   57      PASS    PRECISE;SVTYPE=INS;SVLEN=1315;END=745766;SUPPORT=13;COVERAGE=62,20,20,20,52;STRAND=+-;AF=0.650;STDEV_LEN=0.000;STDEV_POS=0.000;SUPPORT_LONG=0   GT:GQ:DR:DV     0/1:33:7:13
+
+This one is an insertion starting at 745766 and 1315 bp long. I think it starts at the purple boxes.
         
+![image](https://user-images.githubusercontent.com/115577500/199866247-8513d17d-85fa-4799-8ab9-5cfd430dac38.png)
+
 Inversion
         
 Scaffold_4      22800790        Sniffles2.INV.33D9S0    N       <INV>   60      PASS    PRECISE;SVTYPE=INV;SVLEN=410447;END=23211237;SUPPORT=25;COVERAGE=40,4,81,0,62;STRAND=-;AF=0.397;STDEV_LEN=0.000;STDEV_POS=0.000 GT:GQ:DR:DV     0/1:60:38:25
+        
+This one is an inversion starting at 22800790 and spanning a whopping 410447 bp ending at 23211237. Honestly could not see it in the IGV even after reading the help manual and watching some youtube videos. 
+        
+![Uploading image.png…]()
+
         
 
 
