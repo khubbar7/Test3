@@ -150,7 +150,50 @@ scp khubbar7@sphinx.ag.utk.edu:/home/khubbar7/test3/question2a/PacBiosniffles.so
 scp khubbar7@sphinx.ag.utk.edu:/home/khubbar7/test3/question2a/PacBiosniffles.sorted.bam .
 scp khubbar7@sphinx.ag.utk.edu:/home/khubbar7/test3/question2a/pacbiosniffles.vcf .
 scp khubbar7@sphinx.ag.utk.edu:/home/khubbar7/test3/question2a/pacbiosniffles.vcf.gz.tbi .
+scp khubbar7@sphinx.ag.utk.edu:/pickett_shared/teaching/EPP622_Fall2022/raw_data/citrus_test2/Maustralasica_genome.4.fasta .
 ```
+
+Finding out how many deletions:
+
+```
+grep -c '<DEL>' pacbiosniffles.vcf
+```
+
+Amswer: 200 deletions
+
+Finding out how many duplications:
+
+```
+grep -c '<DUP>' pacbiosniffles.vcf
+```
+Answer: 30
+
+Finding out how many insertions
+
+```
+ grep -c '<INS>' pacbiosniffles.vcf
+ 
+```
+
+
+Answer: 19
+
+Finding out how many inversions:
+
+```
+grep -c '<INV>' pacbiosniffles.vcf
+        
+```
+
+Answer: 126
+
+Finding out how many translocations:
+
+```
+grep -c '<BND>' pacbiosniffles.vcf
+```
+
+Answer: 0
 
 
 
