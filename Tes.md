@@ -153,13 +153,16 @@ scp khubbar7@sphinx.ag.utk.edu:/home/khubbar7/test3/question2a/pacbiosniffles.vc
 scp khubbar7@sphinx.ag.utk.edu:/pickett_shared/teaching/EPP622_Fall2022/raw_data/citrus_test2/Maustralasica_genome.4.fasta .
 ```
 
+
+## Back on my terminal, lets start counting! 🥳
+
 Finding out how many deletions:
 
 ```
 grep -c '<DEL>' pacbiosniffles.vcf
 ```
 
-Amswer: 200 deletions
+Answer: 200 deletions
 
 Finding out how many duplications:
 
@@ -194,6 +197,44 @@ grep -c '<BND>' pacbiosniffles.vcf
 ```
 
 Answer: 0
+
+![image](https://user-images.githubusercontent.com/115577500/199860501-6a0fe358-953b-47f0-a548-6dcd25e8e26e.png)
+
+
+## Lets start comparing!!
+
+Because I am lazy im just going to grep for them which will look like this, but change out the letters in the pointy parenthesis to match the correct insertion (INS) deletion (DEL), ect
+
+```
+grep '<INS>' pacbiosniffles.vcf
+```
+
+
+Deletion
+
+Scaffold_4      26116645        Sniffles2.DEL.2EDES0    N       <DEL>   60      PASS    PRECISE;SVTYPE=DEL;SVLEN=-400;END=26117045;SUPPORT=30;COVERAGE=73,72,71,70,73;STRAND=+-;AF=0.423;STDEV_LEN=0.000;STDEV_POS=0.000        GT:GQ:DR:DV     0/1:60:41:30
+        
+ So this code says its is a deletion, (SVTYPE), it starts at 26116645, ends at 26117045, is 400 nucleotides long (SVLEN). Which is exactly what we see because when I load it into IGV and look up the ID (Scaffold_4:26,116,343-26,117,416) I see the 400 bp deletion at the bottom. 
+        
+        
+![image](https://user-images.githubusercontent.com/115577500/199862492-5c11419c-4c70-4313-ace1-70433f992dc6.png)
+
+        
+
+Duplication
+
+Scaffold_4      26142922        Sniffles2.DUP.306CS0    N       <DUP>   60      PASS    PRECISE;SVTYPE=DUP;SVLEN=4785;END=26147707;SUPPORT=9;COVERAGE=66,32,42,None,None;STRAND=+-;AF=0.231;STDEV_LEN=0.000;STDEV_POS=0.000     GT:GQ:DR:DV     0/1:6:30:9
+
+This is a 4785 bp duplication starting at 26142922 and ending at 26147707. This is what we see in IGV 
+
+Insertion
+        
+Scaffold_4      745766  Sniffles2.INS.E6S0      N       <INS>   57      PASS    PRECISE;SVTYPE=INS;SVLEN=1315;END=745766;SUPPORT=13;COVERAGE=62,20,20,20,52;STRAND=+-;AF=0.650;STDEV_LEN=0.000;STDEV_POS=0.000;SUPPORT_LONG=0   GT:GQ:DR:DV     0/1:33:7:13
+        
+Inversion
+        
+Scaffold_4      22800790        Sniffles2.INV.33D9S0    N       <INV>   60      PASS    PRECISE;SVTYPE=INV;SVLEN=410447;END=23211237;SUPPORT=25;COVERAGE=40,4,81,0,62;STRAND=-;AF=0.397;STDEV_LEN=0.000;STDEV_POS=0.000 GT:GQ:DR:DV     0/1:60:38:25
+        
 
 
 
